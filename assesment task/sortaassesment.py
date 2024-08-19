@@ -74,12 +74,10 @@ def saveanquit():
                       style='plain',
                      title = ver + ' of countrys'
                     )
-                plt.yticks()
+                
                 plt.gcf().axes[0].yaxis.get_major_formatter().set_scientific(False)
                 plt.savefig(ver + ' of countrys.png',dpi = 800)
-
-    
-        
+   
 
 def anylizedataset():
     global dataset
@@ -114,7 +112,7 @@ def anylizedataset():
             mean = dataset['2000 Population'].mean()
         if y == '6':
             mean = dataset['1990 Population'].mean()
-        print(mean)
+        print('the mean is ',mean)
 
 
     if i == '2':
@@ -138,7 +136,7 @@ def anylizedataset():
             median = dataset['2000 Population'].median()
         if t == '6':
             median = dataset['1990 Population'].median()
-        print(median)
+        print('the median is ',median)
 
 
     if i == '3':
@@ -169,7 +167,7 @@ def anylizedataset():
             max = dataset['1990 Population'].max() 
             min = dataset['1990 Population'].min()
         
-        print('The max is',max,'The min is',min)
+        print('The max is ',max,'The min is ',min)
 
     if i == '4':
         t = input("""What do you want to find the total of
@@ -192,7 +190,7 @@ def anylizedataset():
             sum = dataset['2000 Population'].sum()
         if t == '6':
             sum = dataset['1990 Population'].sum()
-        print(sum)
+        print('the sum is ',sum)
 
 def showdataset():
     global dataset
@@ -280,7 +278,7 @@ def showtable():
 # running all of the functions
 
 while true == True:
-    i = input("do you want a table or a spreadsheet?(1 for table 2 for spreadsheet 3 for anylizing and type q for quit): ")
+    i = input("do you want a table or a spreadsheet?(1 for table 2 for spreadsheet 3 for anylizing and type q to quit and save): ")
     if i == '1':
         showtable()
     if i == '2':
