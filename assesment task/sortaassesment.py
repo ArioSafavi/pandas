@@ -270,8 +270,10 @@ def showtable():
           y = ver,
           color = 'green',
           alpha = 0.3,
+          fontsize=8,
          title = ver + ' of countrys'
         )
+    plt.gcf().axes[0].yaxis.get_major_formatter().set_scientific(False)
     plt.show()
 
 
